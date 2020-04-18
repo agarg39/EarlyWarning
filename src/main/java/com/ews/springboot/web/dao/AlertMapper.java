@@ -1,4 +1,4 @@
-package com.ews.springboot.web.dao;
+	package com.ews.springboot.web.dao;
 
 import java.util.Date;
 import java.util.List;
@@ -60,7 +60,7 @@ public interface AlertMapper {
 			@Param("resolutionPlanToClose") String resolutionPlanToClose, @Param("executionStep") int executionStep,
 			@Param("runDate") Date runDate);
 
-	@Update("update DS.CommandCenter_EWS_EarlyWarningSystem\r\n" + "    set\r\n"
+	@Update("update DS.CommandCenter_EWS_EarlyWarningSystem\r\n" + "    set Status=#{alert.status}, \r\n"
 			+ "           Measure=#{alert.measure},\r\n" + "           Summary=#{alert.summary},\r\n"
 			+ "           DetailComments=#{alert.detailComments},\r\n" + "           Status=#{alert.status},\r\n"
 			+ "           Owner=#{alert.owner},\r\n"

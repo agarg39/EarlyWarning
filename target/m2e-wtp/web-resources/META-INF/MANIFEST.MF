@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: ews-web-application
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: modir
+Built-By: agarg39
 Implementation-Vendor-Id: com.ews.springboot.web
-Build-Jdk: 1.8.0_231
+Build-Jdk: 1.8.0_201
 Implementation-URL: http://projects.spring.io/spring-boot/ews-web-appl
  ication/
 Created-By: Maven Integration for Eclipse

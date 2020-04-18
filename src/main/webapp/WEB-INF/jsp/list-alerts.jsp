@@ -8,12 +8,26 @@
 		<input type="date" id="runDate" name="runDate" />
 
 		<label style="font-size: large; padding-left: 1%">Job Name:</label>
-		<select name="jobName" id="jobName">
+
+		<select name="jobName" id="jobName" class="jobName">
 			<option value="">Choose Job Name</option>
 			<c:forEach items="${alertDataList}" var="alertData">
 				<option value="${alertData.jobName}">${alertData.jobName}</option>
 			</c:forEach>
 		</select>
+
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			var code = {};
+			$("select[name='jobName'] > option").each(function() {
+				if (code[this.text]) {
+					$(this).remove();
+				} else {
+					code[this.text] = this.value;
+				}
+			});
+		</script>
+
 
 		<input type="submit" id="search" value="Search"
 			class="btn btn-success" />
@@ -64,15 +78,15 @@
 						<td>${alertData.result}</td>
 						<td>${alertData.maxResult}</td>
 						<td>${alertData.testStatus}</td>
-						<td><input type="text" value="${alertData.classification}"></td>
-						<td><input type="text" value="${alertData.measure}"></td>
-						<td><input type="text" value="${alertData.summary}"></td>
-						<td><input type="text" value="${alertData.detailComments}"></td>
-						<td><input type="text" value="${alertData.severity}"></td>
-						<td><input type="text" value="${alertData.rallyDefect}"></td>
-						<td><input type="text" value="${alertData.serviceNowTix}"></td>
-						<td><input type="text" value="${alertData.status}"></td>
-						<td><input type="text" value="${alertData.owner}"></td>
+						<td>${alertData.classification}</td>
+						<td>${alertData.measure}</td>
+						<td>${alertData.summary}</td>
+						<td>${alertData.detailComments}</td>
+						<td width=100px>${alertData.severity}</td>
+						<td>${alertData.rallyDefect}</td>
+						<td>${alertData.serviceNowTix}</td>
+						<td>${alertData.status}</td>
+						<td>${alertData.owner}</td>
 						<td><a type="button" class="btn btn-success"
 							href="/update-alert?ewsId=${alertData.ewsId}">Update</a></td>
 					</tr>
@@ -112,7 +126,7 @@
 							value="${alertData.resolutionPlanToClose}"></td>
 						<td>${alertData.executionStep}</td>
 						<td><a type="button" class="btn btn-success"
-							href="/get-Details?jobName=${alertData.jobName}&jobDescription=${alertData.jobDescription}&status=${alertData.status}&measure=${alertData.measure}&summary=${alertData.summary}&detailComments=${alertData.detailComments}&owner=${alertData.owner}&resolutionPlanToClose=${alertData.resolutionPlanToClose}&executionStep=${alertData.executionStep}&runDate=${alertData.rundate}">Update</a></td>
+							href="/update-alert?ewsId=${alertData.ewsId}">Update</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

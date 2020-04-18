@@ -1,1 +1,0 @@
-INSERT INTO CommandCenter_EWS_EarlyWarningSystem values();

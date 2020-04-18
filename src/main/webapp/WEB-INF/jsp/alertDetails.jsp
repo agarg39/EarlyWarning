@@ -10,7 +10,7 @@
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="jobName">Job Name</form:label>
-			<form:input path="jobName" type="text" class="form-control"/>
+			<form:input path="jobName" type="text" class="form-control" disabled="true"/>
 			<form:errors path="jobName" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
@@ -41,59 +41,66 @@
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="priorResult">Prior Result</form:label>
-			<form:input path="priorResult" type="text" class="form-control" />
+			<form:input path="priorResult" type="text" class="form-control" disabled="true"/>
 			<form:errors path="priorResult" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="minResult">Min Result</form:label>
-			<form:input path="minResult" type="text" class="form-control" />
+			<form:input path="minResult" type="text" class="form-control" disabled="true"/>
 			<form:errors path="minResult" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="result">Result</form:label>
-			<form:input path="result" type="text" class="form-control" />
+			<form:input path="result" type="text" class="form-control" disabled="true"/>
 			<form:errors path="result" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="maxResult">Max Result</form:label>
-			<form:input path="maxResult" type="text" class="form-control" />
+			<form:input path="maxResult" type="text" class="form-control" disabled="true"/>
 			<form:errors path="maxResult" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="rundate">RunDate</form:label>
-			<form:input path="rundate" type="text" class="form-control" />
+			<form:input path="rundate" type="text" class="form-control" disabled="true"/>
 			<form:errors path="rundate" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="lastJobRunId">Last Job RunId</form:label>
-			<form:input path="lastJobRunId" type="text" class="form-control" />
+			<form:input path="lastJobRunId" type="text" class="form-control" disabled="true"/>
 			<form:errors path="lastJobRunId" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="testStatus">Test Status</form:label>
-			<form:input path="testStatus" type="text" class="form-control" />
+			<form:input path="testStatus" type="text" class="form-control" disabled="true"/>
 			<form:errors path="testStatus" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="measure">Measure</form:label>
-			<form:input path="measure" type="text" class="form-control" />
+			<form:input path="measure" type="text" class="form-control" disabled="true"/>
 			<form:errors path="maxResult" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="summary">Summary</form:label>
-			<form:input path="summary" type="text" class="form-control" />
+			<form:input path="summary" type="text" class="form-control" disabled="true"/>
 			<form:errors path="summary" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="detailComments">Detail Comments</form:label>
-			<form:input path="detailComments" type="text" class="form-control" />
+			<form:input path="detailComments" type="text" class="form-control" disabled="true"/>
 			<form:errors path="detailComments" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
-			<form:label path="classification">Classification</form:label>
-			<form:input path="classification" type="text" class="form-control" />
+			<form:label path="classification">Classification</form:label>			
+				<select id="classification"  name="classification" class="form-control" >
+					<option value="Accept">Accept</option>
+					<option value="Known Issue">Known Issue</option>
+					<option value="Test">Test</option>
+					<option value="Defect">Defect</option>
+				</select>				
+			
 			<form:errors path="classification" cssClass="text-warning" />
 		</fieldset>
+		
 		<fieldset class="form-group">
 			<form:label path="severity">Severity</form:label>
 			<form:input path="severity" type="text" class="form-control" />
@@ -111,8 +118,12 @@
 			<form:errors path="owner" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
-			<form:label path="status">Status</form:label>
-			<form:input path="status" type="text" class="form-control" />
+			<form:label path="status">Status</form:label>			
+			<select id="status"  name="status" class="form-control" >
+					<option value="Open">Open</option>
+					<option value="Pending">Pending</option>
+					<option value="Resolved">Resolved</option>					
+				</select>			
 			<form:errors path="status" cssClass="text-warning" />
 		</fieldset>
 		<fieldset class="form-group">
